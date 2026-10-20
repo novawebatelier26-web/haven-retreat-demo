@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10201e">
+
+<title>The Haven Retreat | Poolside Lodge Experience</title>
+
+<meta name="description" content="Explore The Haven Retreat, a fictional luxury lodge concept featuring poolside relaxation, chalets, braai facilities and family escapes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark: #10201e;
+  --green: #203c35;
+  --gold: #d6b77e;
+  --cream: #f7f5ef;
+  --white: #fff;
+  --grey: #6c7773;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.notice {
+  background: #e8d8b9;
+  color: #42331b;
+  padding: 8px 15px;
+  text-align: center;
+  font-size: 11px;
+}
+
+header {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 6%;
+  color: white;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo span {
+  display: block;
+  font: 500 9px 'DM Sans', sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 9px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav a:hover { color: var(--gold); }
+
+.nav-book {
+  border: 1px solid white;
+  padding: 11px 16px;
+}
+
+.hero {
+  min-height: 620px;
+  height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+}
+
+.hero video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.48),
+    rgba(0,0,0,.20) 35%,
+    rgba(0,0,0,.58)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  max-width: 1000px;
+  animation: rise 1.3s ease both;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(47px, 9vw, 105px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  color: #e7d1ac;
+  font-weight: 400;
+}
+
+.hero-content p {
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 15px 24px;
+  border: 1px solid var(--gold);
+  font: 700 11px 'DM Sans', sans-serif;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-align: center;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: white;
+  border-color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 28px;
+  z-index: 3;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+section { padding: 95px 8%; }
+
+.section-heading {
+  text-align: center;
+  max-width: 690px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+  font-size: clamp(35px, 5vw, 55px);
+  margin-bottom: 17px;
+}
+
+.section-heading p {
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro img {
+  height: 470px;
+  border-radius: 3px;
+}
+
+.intro h2 {
+  font-size: clamp(36px, 5vw, 55px);
+  margin-bottom: 22px;
+}
+
+.intro p {
+  color: var(--grey);
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.pool {
+  background: var(--green);
+  color: white;
+}
+
+.pool .section-heading p { color: #c4d0c8; }
+
+.pool-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pool-grid img {
+  height: 100%;
+  min-height: 370px;
+}
+
+.pool-details {
+  background: #2d4b41;
+  padding: 30px;
+}
+
+.pool-details h3 {
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.detail {
+  border-bottom: 1px solid #587064;
+  padding: 13px 0;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.detail span { color: #d5ded7; }
+
+.detail strong { text-align: right; }
+
+.pool-note {
+  margin-top: 19px;
+  color: #d4dfd7;
+  font-size: 11px;
+}
+
+.accommodation {
+  background: #efede6;
+}
+
+.chalet-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 19px;
+}
+
+.chalet {
+  background: white;
+}
+
+.chalet img { height: 250px; }
+
+.chalet-content { padding: 24px; }
+
+.chalet h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.chalet p {
+  font-size: 13px;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+
+.chalet .price {
+  font-weight: 700;
+  color: #98733b;
+  font-size: 13px;
+}
+
+.chalet a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #94703c;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.facility {
+  padding: 28px 17px;
+  text-align: center;
+  border: 1px solid #dddcd4;
+  background: white;
+}
+
+.facility .symbol {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.facility h3 {
+  font-size: 21px;
+  margin-bottom: 9px;
+}
+
+.facility p {
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.gallery {
+  background: #eae8e0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+}
+
+.gallery-grid figure {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.gallery-grid img {
+  height: 255px;
+  transition: transform .4s;
+}
+
+.gallery-grid figure:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-grid figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 35px 16px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+.attractions {
+  background: var(--green);
+  color: white;
+}
+
+.attractions .section-heading p { color: #cbd4cc; }
+
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.attraction {
+  border-top: 1px solid var(--gold);
+  padding-top: 23px;
+}
+
+.attraction h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.attraction p {
+  color: #c8d3ca;
+  font-size: 13px;
+}
+
+.policies {
+  background: white;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.policy {
+  padding: 22px;
+  border: 1px solid #e5e3dc;
+}
+
+.policy h3 {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.policy p {
+  color: var(--grey);
+  font-size: 13px;
+}
+
+.booking {
+  background: #e8e3d8;
+}
+
+.booking-form {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8d7d1;
+  font: 14px 'DM Sans', sans-serif;
+  background: white;
+  border-radius: 0;
+}
+
+.field textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+.full { grid-column: 1/-1; }
+
+.booking-form .btn { width: 100%; }
+
+.form-note {
+  grid-column: 1/-1;
+  color: var(--grey);
+  font-size: 11px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 18px;
+  z-index: 30;
+  padding: 13px 17px;
+  background: #187c4b;
+  color: white;
+  border-radius: 35px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 5px 20px #0004;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 55px 8% 30px;
+  text-align: center;
+}
+
+footer .logo { margin-bottom: 25px; }
+
+footer p {
+  font-size: 12px;
+  color: #b6c2b9;
+  margin-bottom: 12px;
+}
+
+footer .bottom {
+  border-top: 1px solid #42534a;
+  padding-top: 25px;
+  margin-top: 35px;
+  font-size: 10px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 800px) {
+  header {
+    padding: 17px 5%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo { font-size: 21px; }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    font-size: 10px;
+  }
+
+  .nav-book { padding: 8px 10px; }
+
+  section { padding: 65px 6%; }
+
+  .hero h1 { font-size: 47px; }
+
+  .intro,
+  .pool-grid {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .intro img { height: 300px; }
+
+  .pool-grid img {
+    min-height: 0;
+    height: 260px;
+  }
+
+  .chalet-grid,
+  .attraction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities,
+  .policy-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+
+  .gallery-grid img { height: 190px; }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .whatsapp {
+    bottom: 14px;
+    right: 12px;
+    font-size: 11px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  .hero-content { animation: none; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="notice">
+  Fictional lodge website concept by NovaWeb Atelier26.
+  Sample amenities, prices and policies are for demonstration only.
+</div>
+
+<header>
+  <a href="#home" class="logo">
+    THE HAVEN
+    <span>RETREAT</span>
+  </a>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#pool">THE POOL</a>
+    <a href="#stay">STAY</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#booking" class="nav-book">BOOK YOUR ESCAPE</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1800&q=85"
+    aria-hidden="true">
+
+    <source
+      src="https://videos.pexels.com/video-files/5997220/5997220-hd_1920_1080_25fps.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <div class="hero-content">
+    <div class="eyebrow">A LUXURY POOLSIDE ESCAPE</div>
+
+    <h1>Welcome to<br><em>The Haven Retreat</em></h1>
+
+    <p>RELAX. RECONNECT. EXPERIENCE MORE.</p>
+
+    <div class="hero-buttons">
+      <a href="#pool" class="btn">EXPLORE THE POOL</a>
+      <a href="#booking" class="btn btn-outline">PLAN YOUR STAY</a>
+    </div>
+  </div>
+
+  <div class="scroll">DISCOVER THE EXPERIENCE ↓</div>
+
+</section>
+
+<section class="intro" id="about">
+
+  <img
+    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+    alt="Illustrative luxury resort swimming pool"
+    loading="lazy">
+
+  <div>
+    <div class="eyebrow">YOUR ESCAPE BEGINS HERE</div>
+
+    <h2>Not Just a Stay. An Experience.</h2>
+
+    <p>
+      Imagine sun-filled afternoons beside sparkling blue water,
+      relaxed evenings around the braai and peaceful nights
+      surrounded by nature.
+    </p>
+
+    <p>
+      The Haven Retreat is a fictional lodge concept inspired by
+      the family and leisure travel experience around Thabazimbi.
+      Its facilities and accommodation details are examples
+      that can be customised for a real lodge.
+    </p>
+
+    <a href="#stay" class="btn">EXPLORE ACCOMMODATION →</a>
+  </div>
+
+</section>
+
+<section class="pool" id="pool">
+
+  <div class="section-heading">
+    <div class="eyebrow">THE HEART OF THE RETREAT</div>
+    <h2>Life Is Better Poolside.</h2>
+    <p>
+      From morning swims to unforgettable sunset moments,
+      the pool is the centrepiece of this lodge concept.
+    </p>
+  </div>
+
+  <div class="pool-grid">
+
+    <img
+      src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1100&q=85"
+      alt="Illustrative outdoor swimming pool"
+      loading="lazy">
+
+    <div class="pool-details">
+      <h3>The Pool Experience</h3>
+
+      <div class="detail">
+        <span>Access</span>
+        <strong>Lodge guests only*</strong>
+      </div>
+
+      <div class="detail">
+        <span>Pool hours</span>
+        <strong>07:00 – 21:00*</strong>
+      </div>
+
+      <div class="detail">
+        <span>Heating</span>
+        <strong>Not heated*</strong>
+      </div>
+
+      <div class="detail">
+        <span>Children</span>
+        <strong>Adult supervision required</strong>
+      </div>
+
+      <div class="detail">
+        <span>Day visitors</span>
+        <strong>By prior arrangement*</strong>
+      </div>
+
+      <div class="detail">
+        <span>Depth & fencing</span>
+        <strong>Confirm before booking</strong>
+      </div>
+
+      <p class="pool-note">
+        *Illustrative demo policies. A real lodge must confirm its
+        actual pool hours, access rules, depth, safety features,
+        maintenance and visitor policy before publication.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="accommodation" id="stay">
+
+  <div class="section-heading">
+    <div class="eyebrow">STAY A LITTLE LONGER</div>
+    <h2>Our Accommodation</h2>
+    <p>
+      Three example accommodation options demonstrating how
+      a lodge can present its units and pricing.
+    </p>
+  </div>
+
+  <div class="chalet-grid">
+
+    <article class="chalet">
+      <img
+        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=85"
+        alt="Illustrative chalet bedroom"
+        loading="lazy">
+
+      <div class="chalet-content">
+        <h3>Family Chalet</h3>
+        <p>
+          A welcoming self-catering concept for a relaxed family
+          getaway, with space to unwind after a day by the pool.
+        </p>
+        <div class="price">Example rate: R1,800 / night</div>
+        <a href="#booking">CHECK AVAILABILITY →</a>
+      </div>
+    </article>
+
+    <article class="chalet">
+      <img
+        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=85"
+        alt="Illustrative premium accommodation"
+        loading="lazy">
+
+      <div class="chalet-content">
+        <h3>Poolside Suite</h3>
+        <p>
+          An elegant escape designed around comfort, privacy
+          and easy access to the lodge experience.
+        </p>
+        <div class="price">Example rate: R1,500 / night</div>
+        <a href="#booking">CHECK AVAILABILITY →</a>
+      </div>
+    </article>
+
+    <article class="chalet">
+      <img
+        src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=85"
+        alt="Illustrative luxury accommodation"
+        loading="lazy">
+
+      <div class="chalet-content">
+        <h3>Signature Retreat</h3>
+        <p>
+          A premium accommodation concept for couples or
+          travellers seeking an elevated getaway.
+        </p>
+        <div class="price">Example rate: R2,200 / night</div>
+        <a href="#booking">CHECK AVAILABILITY →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p style="text-align:center;font-size:11px;color:#777;margin-top:25px">
+    Rates and unit types are fictional examples. Seasonal rates,
+    capacity and availability require confirmation for a real property.
+  </p>
+
+</section>
+
+<section id="facilities">
+
+  <div class="section-heading">
+    <div class="eyebrow">EVERYTHING FOR YOUR GETAWAY</div>
+    <h2>The Lodge Experience</h2>
+    <p>
+      Showcase the amenities that help families and holidaymakers
+      choose their ideal weekend escape.
+    </p>
+  </div>
+
+  <div class="facilities">
+
+    <div class="facility">
+      <div class="symbol">🏊</div>
+      <h3>Swimming Pool</h3>
+      <p>A refreshing centrepiece for sunny afternoons.</p>
+    </div>
+
+    <div class="facility">
+      <div class="symbol">🔥</div>
+      <h3>Lapa & Braai</h3>
+      <p>A welcoming outdoor space for shared meals.</p>
+    </div>
+
+    <div class="facility">
+      <div class="symbol">🍳</div>
+      <h3>Self-Catering</h3>
+      <p>Show guests the kitchen facilities available in each unit.</p>
+    </div>
+
+    <div class="facility">
+      <div class="symbol">🚗</div>
+      <h3>Parking</h3>
+      <p>Clearly communicate on-site parking arrangements.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="gallery" id="gallery">
+
+  <div class="section-heading">
+    <div class="eyebrow">DISCOVER THE BEAUTY</div>
+    <h2>Moments at The Haven</h2>
+    <p>
+      Illustrative images demonstrating the ideal order for
+      a lodge's real photo gallery.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=85" alt="Pool during the day" loading="lazy">
+      <figcaption>01 / Poolside Days</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=85" alt="Resort evening atmosphere" loading="lazy">
+      <figcaption>02 / Evening Atmosphere</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" alt="Illustrative entertaining space" loading="lazy">
+      <figcaption>03 / Shared Spaces</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=85" alt="Illustrative guest bedroom" loading="lazy">
+      <figcaption>04 / Bedrooms</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Illustrative luxury bathroom" loading="lazy">
+      <figcaption>05 / Interior Details</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=85" alt="Nature scenery" loading="lazy">
+      <figcaption>06 / Nature & Escape</figcaption>
+    </figure>
+
+  </div>
+
+  <p style="font-size:11px;text-align:center;color:#777;margin-top:20px">
+    All gallery photographs are illustrative and do not depict
+    an actual Haven Retreat property.
+  </p>
+
+</section>
+
+<section class="attractions" id="explore">
+
+  <div class="section-heading">
+    <div class="eyebrow">EXPLORE THE REGION</div>
+    <h2>Beyond The Lodge.</h2>
+    <p>
+      Discover attractions that make the wider Thabazimbi
+      region an appealing holiday destination.
+    </p>
+  </div>
+
+  <div class="attraction-grid">
+
+    <div class="attraction">
+      <h3>Marakele National Park</h3>
+      <p>
+        Discover beautiful landscapes, wildlife and nature
+        experiences in the Waterberg region.
+      </p>
+    </div>
+
+    <div class="attraction">
+      <h3>Outdoor Adventures</h3>
+      <p>
+        Explore local nature activities and experiences
+        available through independent operators.
+      </p>
+    </div>
+
+    <div class="attraction">
+      <h3>Thabazimbi</h3>
+      <p>
+        Enjoy the atmosphere of the surrounding region
+        and its scenic mountain landscapes.
+      </p>
+    </div>
+
+  </div>
+
+  <p style="text-align:center;font-size:11px;color:#bdcabe;margin-top:28px">
+    No distance or travel-time claims are made for this fictional property.
+  </p>
+
+</section>
+
+<section class="policies" id="policies">
+
+  <div class="section-heading">
+    <div class="eyebrow">GOOD TO KNOW</div>
+    <h2>Before You Arrive</h2>
+    <p>
+      A professional lodge website should answer important
+      questions before guests need to ask.
+    </p>
+  </div>
+
+  <div class="policy-grid">
+
+    <div class="policy">
+      <h3>Pool Safety</h3>
+      <p>
+        Publish verified pool depth, fencing information,
+        supervision rules and access arrangements.
+      </p>
+    </div>
+
+    <div class="policy">
+      <h3>Day Visitors & Events</h3>
+      <p>
+        State whether day visitors, birthdays and small
+        private gatherings are permitted.
+      </p>
+    </div>
+
+    <div class="policy">
+      <h3>Pets & Children</h3>
+      <p>
+        Clearly explain pet-friendly accommodation,
+        child policies and pool-area restrictions.
+      </p>
+    </div>
+
+    <div class="policy">
+      <h3>Booking & Cancellation</h3>
+      <p>
+        Provide confirmed deposits, cancellation terms,
+        seasonal prices and check-in information.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="booking" id="booking">
+
+  <div class="section-heading">
+    <div class="eyebrow">YOUR NEXT ESCAPE</div>
+    <h2>Plan Your Poolside Stay.</h2>
+    <p>
+      Try the interactive booking enquiry demonstration.
+      No real reservation or payment will be processed.
+    </p>
+  </div>
+
+  <form class="booking-form" id="bookingForm">
+
+    <div class="field">
+      <label for="name">FULL NAME</label>
+      <input id="name" required placeholder="Your full name">
+    </div>
+
+    <div class="field">
+      <label for="email">EMAIL ADDRESS</label>
+      <input id="email" type="email" required placeholder="you@example.com">
+    </div>
+
+    <div class="field">
+      <label for="checkin">CHECK-IN DATE</label>
+      <input id="checkin" type="date" required>
+    </div>
+
+    <div class="field">
+      <label for="checkout">CHECK-OUT DATE</label>
+      <input id="checkout" type="date" required>
+    </div>
+
+    <div class="field">
+      <label for="unit">ACCOMMODATION</label>
+      <select id="unit" required>
+        <option value="">Select accommodation</option>
+        <option>Family Chalet</option>
+        <option>Poolside Suite</option>
+        <option>Signature Retreat</option>
+        <option>Whole Lodge Enquiry</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="guests">NUMBER OF GUESTS</label>
+      <select id="guests" required>
+        <option value="">Select guests</option>
+        <option>1 Guest</option>
+        <option>2 Guests</option>
+        <option>3 Guests</option>
+        <option>4 Guests</option>
+        <option>5–8 Guests</option>
+        <option>9+ Guests</option>
+      </select>
+    </div>
+
+    <div class="field full">
+      <label for="message">SPECIAL REQUESTS</label>
+      <textarea id="message" placeholder="Tell us about your planned getaway..."></textarea>
+    </div>
+
+    <div class="full">
+      <button class="btn" type="submit">
+        PREVIEW POOL & LODGE ENQUIRY →
+      </button>
+    </div>
+
+    <p class="form-note">
+      Demonstration only. Your details are not transmitted.
+      A real client website can later be connected to the
+      lodge's approved email or WhatsApp contact.
+    </p>
+
+  </form>
+
+</section>
+
+</main>
+
+<a href="#booking" class="whatsapp" aria-label="Open pool availability enquiry">
+  ◉ Check Pool Availability
+</a>
+
+<footer>
+  <div class="logo">
+    THE HAVEN
+    <span>RETREAT</span>
+  </div>
+
+  <p>Relax. Reconnect. Experience More.</p>
+
+  <p>
+    Fictional luxury lodge website concept designed by
+    NovaWeb Atelier26.
+  </p>
+
+  <p class="bottom">
+    © <span id="year"></span> The Haven Retreat.
+    Portfolio demonstration only.
+  </p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const checkin = document.getElementById("checkin");
+const checkout = document.getElementById("checkout");
+
+const today = new Date();
+
+const localToday = [
+  today.getFullYear(),
+  String(today.getMonth() + 1).padStart(2, "0"),
+  String(today.getDate()).padStart(2, "0")
+].join("-");
+
+checkin.min = localToday;
+checkout.min = localToday;
+
+checkin.addEventListener("change", function() {
+  checkout.min = checkin.value || localToday;
+
+  if (checkout.value && checkout.value <= checkin.value) {
+    checkout.value = "";
+  }
+});
+
+document.getElementById("bookingForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    const arrival = checkin.value;
+    const departure = checkout.value;
+
+    if (departure <= arrival) {
+      alert("Please choose a check-out date after check-in.");
+      return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const unit = document.getElementById("unit").value;
+    const guests = document.getElementById("guests").value;
+
+    alert(
+      "THE HAVEN RETREAT — DEMO ENQUIRY\n\n" +
+      "Guest: " + name +
+      "\nAccommodation: " + unit +
+      "\nGuests: " + guests +
+      "\nCheck-in: " + arrival +
+      "\nCheck-out: " + departure +
+      "\n\nThis is a demonstration only.\n" +
+      "No booking has been made."
+    );
+  }
+);
+</script>
+
+</body>
+</html>
